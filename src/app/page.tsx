@@ -34,10 +34,19 @@ export default function Home() {
               </ul>
             </div>
             <div className="space-y-4">
-              <h5 className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-600 font-semibold">Inquiries</h5>
-              <ul className="space-y-2 text-sm text-neutral-400">
-                <li><a href="mailto:hello@prodevelopers.tech" className="hover:text-neutral-50 transition-colors">hello@prodevelopers.tech</a></li>
-                <li className="text-neutral-600 text-xs uppercase tracking-tighter">Available Q3/Q4 2026</li>
+              <h5 className="font-mono text-[9px] md:text-[10px] uppercase tracking-widest text-neutral-600 font-semibold">Connect</h5>
+              <ul className="space-y-3 text-sm text-neutral-400">
+                <li>
+                  <a href="mailto:hello@prodevelopers.tech" className="hover:text-neutral-50 transition-colors block">hello@prodevelopers.tech</a>
+                </li>
+                <li>
+                  <a href="tel:+8801775624505" className="hover:text-neutral-50 transition-colors block">+880 1775 624505</a>
+                </li>
+                <li className="text-neutral-500 leading-relaxed text-xs">
+                  House #128, Hasan Lane,<br />
+                  Tongi, Gazipur, Bangladesh
+                </li>
+                <li className="text-neutral-600 text-[10px] uppercase tracking-tighter pt-1">Available Q3/Q4 2026</li>
               </ul>
             </div>
           </div>
