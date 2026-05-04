@@ -1,3 +1,5 @@
+import { Terminal } from 'lucide-react';
+
 export default function Capabilities() {
   const skills = [
     {
@@ -18,11 +20,11 @@ export default function Capabilities() {
     },
     {
       category: "Protocol Expertise",
-      items: ["gRPC", "WebRTC", "MQTT", "RTSP", "Telegram Bot API"]
+      items: ["WebSockets", "WebRTC", "MQTT", "RTSP", "Telegram Bot API"]
     },
     {
       category: "DevOps",
-      items: ["VPN Mesh (OpenVPN)", "Serverless Architecture", "Scale-to-Zero", "Custom Media Engines"]
+      items: ["Wireguard VPN", "Serverless Architecture", "Scale-to-Zero", "Custom Media Engines"]
     }
   ];
 
@@ -37,18 +39,8 @@ export default function Capabilities() {
               We architect systems.
             </h2>
             <p className="text-neutral-500 text-sm md:text-base leading-relaxed">
-              Our methodology decouples front-facing product delivery from deep-level infrastructure excellence.
+              Our methodology decouples front-facing product delivery from deep-level infrastructure excellence. This ensures your application logic remains agile while its foundation handles extreme complexity.
             </p>
-            <div className="pt-2 md:pt-4">
-              <div className="p-4 border border-neutral-800 bg-neutral-900/30 rounded-sm">
-                <p className="text-[10px] md:text-xs text-neutral-500 font-mono mb-2">// Focus Areas</p>
-                <ul className="text-xs md:text-sm text-neutral-400 space-y-1">
-                  <li>• Mobility & Logistics</li>
-                  <li>• Surveillance Infrastructure</li>
-                  <li>• Enterprise Resource Systems</li>
-                </ul>
-              </div>
-            </div>
           </div>
           
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-6 md:gap-y-8">

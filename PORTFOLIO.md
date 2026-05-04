@@ -84,7 +84,7 @@ Traditional VMS solutions require on-prem NVRs (costly hardware, crash-prone har
 ### Solution Architecture
 
 **Secure Device Connectivity (VPN Mesh)**
-- DVRs/NVRs/IP cameras at remote locations establish VPN tunnels without public IPs
+- DVRs/NVRs/IP cameras at remote locations establish Wireguard tunnels without public IPs
 - Central on-prem server aggregates feeds from all sites
 - Reduces attack surface — no open camera ports to internet
 
