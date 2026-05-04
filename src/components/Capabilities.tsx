@@ -27,37 +27,39 @@ export default function Capabilities() {
   ];
 
   return (
-    <section className="py-24 border-t border-neutral-900 bg-neutral-950">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="lg:col-span-4 space-y-6">
-            <p className="font-mono text-xs text-blue-500 uppercase tracking-widest">Capabilities</p>
-            <h2 className="text-3xl font-semibold tracking-tight leading-tight text-neutral-50">
+    <section className="py-20 md:py-24 border-t border-neutral-900 bg-neutral-950">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12">
+          <div className="lg:col-span-4 space-y-4 md:space-y-6">
+            <p className="font-mono text-[10px] md:text-xs text-blue-500 uppercase tracking-widest">Capabilities</p>
+            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight text-neutral-50">
               We don&apos;t just build apps. <br />
               We architect systems.
             </h2>
-            <p className="text-neutral-500 leading-relaxed">
+            <p className="text-neutral-500 text-sm md:text-base leading-relaxed">
               Our methodology decouples front-facing product delivery from deep-level infrastructure excellence.
             </p>
-            <div className="pt-4">
-              <div className="p-4 border border-blue-500/20 bg-blue-500/5 rounded-sm">
-                <p className="text-xs text-blue-400 font-mono mb-2">// The .cloud Foundation</p>
-                <p className="text-sm text-neutral-400">
-                  Every project on <strong>.tech</strong> is backed by the specialized infrastructure experts at <strong>.cloud</strong> to ensure performance never hits a ceiling.
-                </p>
+            <div className="pt-2 md:pt-4">
+              <div className="p-4 border border-neutral-800 bg-neutral-900/30 rounded-sm">
+                <p className="text-[10px] md:text-xs text-neutral-500 font-mono mb-2">// Focus Areas</p>
+                <ul className="text-xs md:text-sm text-neutral-400 space-y-1">
+                  <li>• Mobility & Logistics</li>
+                  <li>• Surveillance Infrastructure</li>
+                  <li>• Enterprise Resource Systems</li>
+                </ul>
               </div>
             </div>
           </div>
           
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-6 md:gap-y-8">
             {skills.map((skill) => (
               <div key={skill.category} className="space-y-3">
-                <h4 className="font-mono text-[11px] uppercase tracking-wider text-neutral-600 border-b border-neutral-900 pb-2">
+                <h4 className="font-mono text-[10px] md:text-[11px] uppercase tracking-wider text-neutral-600 border-b border-neutral-900 pb-2">
                   {skill.category}
                 </h4>
-                <ul className="flex flex-wrap gap-x-4 gap-y-2">
+                <ul className="flex flex-wrap gap-x-4 gap-y-1.5 md:gap-y-2">
                   {skill.items.map((item) => (
-                    <li key={item} className="text-sm text-neutral-400 hover:text-neutral-50 transition-colors">
+                    <li key={item} className="text-xs md:text-sm text-neutral-400 hover:text-neutral-50 transition-colors">
                       {item}
                     </li>
                   ))}
