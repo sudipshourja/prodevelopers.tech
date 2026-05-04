@@ -8,6 +8,7 @@ export default function Navbar() {
           prodevelopers<span className="text-neutral-500">.tech</span>
         </Link>
         <div className="flex gap-8 text-sm font-medium text-neutral-400 hover:text-neutral-50 transition-colors">
+          <Link href="#services" className="hover:text-neutral-50 transition-colors">Services</Link>
           <Link href="#work" className="hover:text-neutral-50 transition-colors">Portfolio</Link>
           <Link href="https://prodevelopers.cloud" className="hover:text-neutral-50 transition-colors">Infrastructure</Link>
           <Link href="#contact" className="hover:text-neutral-50 transition-colors">Contact</Link>

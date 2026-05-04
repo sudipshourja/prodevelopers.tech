@@ -33,11 +33,11 @@ export default function Work() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div className="space-y-4">
-            <p className="font-mono text-xs text-blue-500 uppercase tracking-widest">Selected Works</p>
-            <h2 className="text-4xl font-semibold tracking-tight">Complexity Managed.</h2>
+            <p className="font-mono text-xs text-blue-500 uppercase tracking-widest">Case Studies</p>
+            <h2 className="text-4xl font-semibold tracking-tight">Battle-tested results.</h2>
           </div>
           <p className="text-neutral-500 max-w-sm">
-            Proven logic deployments across transportation, security, and edge computing.
+            We deliver the stability your business needs with the high-end engineering your industry demands.
           </p>
         </div>
 

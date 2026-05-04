@@ -2,12 +2,14 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Work from "@/components/Work";
 import Capabilities from "@/components/Capabilities";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950">
       <Navbar />
       <Hero />
+      <Services />
       <Capabilities />
       <Work />
       

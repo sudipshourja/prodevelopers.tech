@@ -16,17 +16,17 @@ export default function Hero() {
           </h1>
           
           <p className="text-lg md:text-xl text-neutral-400 max-w-2xl leading-relaxed">
-            We bridge the gap between niche enterprise logic and mass-market scalability. From serverless geospatial stacks to client-side encrypted surveillance, we eliminate the &quot;managed service tax&quot; through custom-architected DIY solutions.
+            We build high-performance products for companies that can&apos;t afford to fail. From rapid MVP launches to scaling legacy infrastructure, we deliver the technical excellence of a systems lab with the business focus of a dedicated product partner.
           </p>
           
           <div className="flex flex-wrap gap-4 pt-4">
-            <a href="#work" className="px-8 py-3 bg-neutral-50 text-neutral-950 font-medium rounded-sm hover:bg-neutral-200 transition-colors">
-              View Portfolio
+            <a href="#services" className="px-8 py-3 bg-neutral-50 text-neutral-950 font-medium rounded-sm hover:bg-neutral-200 transition-colors">
+              Our Services
             </a>
-            <button className="group px-8 py-3 bg-neutral-950 border border-neutral-800 font-mono text-neutral-50 rounded-sm hover:bg-neutral-900 transition-colors inline-flex items-center">
-              $ cat capabilities.txt
+            <a href="#work" className="group px-8 py-3 bg-neutral-950 border border-neutral-800 font-mono text-neutral-50 rounded-sm hover:bg-neutral-900 transition-colors inline-flex items-center">
+              View Case Studies
               <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </button>
+            </a>
           </div>
         </div>
 
