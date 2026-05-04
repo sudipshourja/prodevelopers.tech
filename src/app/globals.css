@@ -3,8 +3,6 @@
 @theme {
   --font-sans: var(--font-inter);
   --font-mono: var(--font-mono);
-  --breakpoint-xxs: 360px;
-  --breakpoint-xs: 480px;
 }
 
 :root {

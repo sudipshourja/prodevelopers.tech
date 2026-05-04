@@ -31,12 +31,12 @@ export default function Work() {
   return (
     <section id="work" className="py-20 md:py-24 border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6 md:gap-4">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6 md:gap-4 text-center md:text-left">
           <div className="space-y-3 md:space-y-4">
             <p className="font-mono text-[10px] md:text-xs text-blue-500 uppercase tracking-widest">Case Studies</p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">Battle-tested results.</h2>
           </div>
-          <p className="text-neutral-500 max-w-sm text-sm md:text-base">
+          <p className="text-neutral-500 max-w-sm text-sm md:text-base mx-auto md:mx-0">
             We deliver the stability your business needs with the high-end engineering your industry demands.
           </p>
         </div>
@@ -48,14 +48,14 @@ export default function Work() {
               className="group p-6 sm:p-8 md:p-10 bg-neutral-950 hover:bg-neutral-900/50 transition-all duration-500"
             >
               <div className="flex flex-col h-full space-y-6 md:space-y-8">
-                <div className="flex justify-between items-start">
+                <div className="flex justify-between items-start text-left">
                   <h3 className="text-xl md:text-2xl font-medium tracking-tight group-hover:text-blue-400 transition-colors">
                     {project.title}
                   </h3>
                   <ArrowUpRight className="w-5 h-5 text-neutral-700 group-hover:text-blue-400 group-hover:translate-x-1 group-hover:-translate-y-1 transition-all hidden sm:block" />
                 </div>
                 
-                <div className="space-y-4 flex-1">
+                <div className="space-y-4 flex-1 text-left">
                   <div>
                     <p className="font-mono text-[9px] md:text-[10px] uppercase text-neutral-600 mb-1">Technical Challenge</p>
                     <p className="text-neutral-400 text-sm md:text-base">{project.challenge}</p>
@@ -66,7 +66,7 @@ export default function Work() {
                   </div>
                 </div>
                 
-                <div className="flex flex-wrap gap-2 pt-2 md:pt-4">
+                <div className="flex flex-wrap gap-2 pt-2 md:pt-4 justify-start">
                   {project.tags.map((tag) => (
                     <span 
                       key={tag} 
