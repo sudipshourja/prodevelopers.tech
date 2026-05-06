@@ -51,7 +51,12 @@ export default function RootLayout({
         className={`${inter.variable} ${mono.variable} font-sans bg-neutral-950 text-neutral-50 antialiased`}
       >
         {children}
+        <Analytics />
       </body>
+    </html>
+  );
+}
+    </body>
     </html>
   );
 }
