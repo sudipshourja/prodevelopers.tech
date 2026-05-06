@@ -1,71 +1,93 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { Menu, X } from 'lucide-react';
+import { useState, useEffect } from "react";
+import { Menu, X, Terminal } from "lucide-react";
+import Link from "next/link";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navLinks = [
     { name: 'Services', href: '#services' },
     { name: 'Work', href: '#work' },
     { name: 'Infrastructure', href: 'https://prodevelopers.cloud' },
-    { name: 'Contact', href: 'mailto:hello@prodevelopers.tech' },
   ];
 
   return (
-    <>
-      <nav className="fixed top-0 left-0 right-0 z-50 border-b border-neutral-900 bg-neutral-950/80 backdrop-blur-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link 
-            href="/" 
-            className="font-mono text-base sm:text-lg font-medium tracking-tight z-50"
-            onClick={() => setIsOpen(false)}
-          >
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-neutral-950/80 backdrop-blur-md border-b border-neutral-900 py-4"
+          : "bg-transparent py-6"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+        <Link href="/" className="flex items-center space-x-2">
+          <Terminal className="w-5 h-5 text-blue-500" />
+          <span className="font-mono text-lg font-medium tracking-tight">
             prodevelopers<span className="text-neutral-500">.tech</span>
-          </Link>
+          </span>
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-8 text-sm font-medium text-neutral-400">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="hover:text-neutral-50 transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Toggle */}
-          <button 
-            className="md:hidden z-50 p-2 -mr-2 text-neutral-400 hover:text-neutral-50 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle menu"
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center space-x-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-sm font-mono text-neutral-400 hover:text-neutral-50 transition-colors uppercase tracking-widest"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="mailto:hello@prodevelopers.tech"
+            className="px-5 py-2 border border-neutral-800 rounded-sm text-sm font-mono text-neutral-50 hover:bg-neutral-900 transition-colors"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+            Connect
+          </a>
         </div>
-      </nav>
 
-      {/* Mobile Menu Overlay */}
-      <div className={`
-        fixed inset-0 bg-neutral-950 z-40 flex flex-col items-center justify-center gap-8 transition-all duration-300 md:hidden
-        ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}
-      `}>
-        {navLinks.map((link) => (
-          <Link 
-            key={link.name} 
-            href={link.href} 
-            className="text-2xl font-medium text-neutral-400 hover:text-neutral-50 transition-colors"
-            onClick={() => setIsOpen(false)}
-          >
-            {link.name}
-          </Link>
-        ))}
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden text-neutral-50"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+        >
+          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
       </div>
-    </>
+
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-neutral-950 border-b border-neutral-900 px-4 py-8 space-y-6 flex flex-col items-center animate-in fade-in slide-in-from-top-4 duration-300">
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-lg font-mono text-neutral-400 uppercase tracking-widest"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="mailto:hello@prodevelopers.tech"
+            className="w-full text-center py-4 bg-neutral-900 border border-neutral-800 rounded-sm font-mono text-neutral-50"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Connect
+          </a>
+        </div>
+      )}
+    </nav>
   );
 }

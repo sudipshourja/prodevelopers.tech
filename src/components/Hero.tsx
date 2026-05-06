@@ -12,7 +12,7 @@ export default function Hero() {
           
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-semibold tracking-tight leading-[1.1] text-neutral-50">
             High-stakes product delivery <br className="hidden md:block" />
-            <span className="text-neutral-500 text-2xl sm:text-4xl md:text-6xl">engineered for complexity.</span>
+            <span className="text-neutral-500 text-2xl sm:text-4xl md:text-6xl text-pretty">engineered for complexity.</span>
           </h1>
           
           <p className="text-base md:text-xl text-neutral-400 max-w-2xl leading-relaxed">

@@ -1,61 +1,62 @@
-import { Terminal } from 'lucide-react';
+import { Smartphone, Video, Globe, Lock, Code2, Database, Cpu } from 'lucide-react';
+
+const skills = [
+  {
+    title: "Cloud & Edge Infrastructure",
+    description: "Cloudflare ecosystem (Workers, R2, Durable Objects) and cost-optimized GCP/S3 storage.",
+    icon: Globe
+  },
+  {
+    title: "Mobile & Real-time",
+    description: "React Native, WebRTC, and background telemetry services for field operations.",
+    icon: Smartphone
+  },
+  {
+    title: "Video & Media Systems",
+    description: "FFmpeg pipelines, HLS/DASH streaming, and low-latency WebRTC synchronization.",
+    icon: Video
+  },
+  {
+    title: "Geospatial Engineering",
+    description: "PMTiles, Valhalla/OSRM, and Maplibre for high-concurrency routing and mapping.",
+    icon: Database
+  },
+  {
+    title: "Security & Encryption",
+    description: "Client-side AES-256 and Wireguard VPN meshes for zero-trust data protection.",
+    icon: Lock
+  },
+  {
+    title: "Core Platform Expertise",
+    description: "Systems integration using Java, Python, and the modern JavaScript/TypeScript ecosystem.",
+    icon: Cpu
+  }
+];
 
 export default function Capabilities() {
-  const skills = [
-    {
-      category: "Cloud/Edge",
-      items: ["Cloudflare Workers", "R2", "Durable Objects", "Google Cloud Storage", "AWS S3-compatible"]
-    },
-    {
-      category: "Mobile & Real-time",
-      items: ["React Native", "WebRTC", "Maplibre GL", "Background Services", "MQTT"]
-    },
-    {
-      category: "Video/Media",
-      items: ["FFmpeg", "HLS/DASH", "RTSP/ONVIF", "WebRTC Streaming", "Client-Side Encryption"]
-    },
-    {
-      category: "Geospatial",
-      items: ["PMTiles", "Valhalla/OSRM", "Vector Tiles", "Matrix Routing"]
-    },
-    {
-      category: "Protocol Expertise",
-      items: ["WebSockets", "WebRTC", "MQTT", "RTSP", "Telegram Bot API"]
-    },
-    {
-      category: "DevOps",
-      items: ["Wireguard VPN", "Serverless Architecture", "Scale-to-Zero", "Custom Media Engines"]
-    }
-  ];
-
   return (
-    <section className="py-20 md:py-24 border-t border-neutral-900 bg-neutral-950">
+    <section id="capabilities" className="py-20 md:py-32 bg-neutral-950 border-t border-neutral-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12">
-          <div className="lg:col-span-4 space-y-4 md:space-y-6 text-center lg:text-left">
-            <p className="font-mono text-[10px] md:text-xs text-blue-500 uppercase tracking-widest">Capabilities</p>
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight text-neutral-50">
-              We don&apos;t just build apps. <br className="hidden lg:block" />
-              We architect systems.
-            </h2>
-            <p className="text-neutral-500 text-sm md:text-base leading-relaxed max-w-md mx-auto lg:mx-0">
-              Our methodology decouples front-facing product delivery from deep-level infrastructure excellence. This ensures your application logic remains agile while its foundation handles extreme complexity.
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 md:gap-24">
+          <div className="lg:col-span-1 space-y-6">
+            <h2 className="font-mono text-[10px] uppercase tracking-widest text-neutral-600 font-semibold">Technical Horsepower</h2>
+            <h3 className="text-3xl md:text-4xl font-semibold text-neutral-50 leading-tight">
+              Systems-Lab <br />
+              <span className="text-neutral-500 text-pretty">Product Engineering.</span>
+            </h3>
+            <p className="text-neutral-500 text-sm md:text-base leading-relaxed max-w-md">
+              We leverage a proven technical foundation to build scalable, high-performance assets. From core platform integration to edge-native logic, we deliver.
             </p>
           </div>
-          
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-6 md:gap-y-8">
-            {skills.map((skill) => (
-              <div key={skill.category} className="space-y-3 text-center sm:text-left">
-                <h4 className="font-mono text-[10px] md:text-[11px] uppercase tracking-wider text-neutral-600 border-b border-neutral-900 pb-2">
-                  {skill.category}
-                </h4>
-                <ul className="flex flex-wrap justify-center sm:justify-start gap-x-4 gap-y-1.5 md:gap-y-2">
-                  {skill.items.map((item) => (
-                    <li key={item} className="text-xs md:text-sm text-neutral-400 hover:text-neutral-50 transition-colors">
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+
+          <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
+            {skills.map((skill, index) => (
+              <div key={index} className="space-y-4">
+                <skill.icon className="w-5 h-5 text-blue-500" />
+                <h4 className="font-mono text-sm font-semibold uppercase tracking-wider text-neutral-200">{skill.title}</h4>
+                <p className="text-neutral-500 text-sm leading-relaxed">
+                  {skill.description}
+                </p>
               </div>
             ))}
           </div>
